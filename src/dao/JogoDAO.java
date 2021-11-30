@@ -91,7 +91,7 @@ public class JogoDAO {
         PreparedStatement stmt = null;
         ResultSet rs = null;
 
-        String sql = "SELECT j.id, j.nome, j.genero, d.nome id_dev, p.nome id_publi FROM jogo j INNER JOIN desenvolvedora d ON j.id_dev = d.id INNER JOIN publicadora p ON j.id_publi = p.id WHERE j.nome = j.nome AND j.genero = j.genero AND j.id_dev = j.id_dev AND j.id_publi = j.id_publi LIMIT 0, 1000";
+        String sql = "SELECT j.id, j.nome, j.genero, d.nome id_dev, p.nome id_publi FROM jogo j INNER JOIN desenvolvedora d ON j.id_dev = d.id INNER JOIN publicadora p ON j.id_publi = p.id WHERE j.nome = j.nome AND j.genero = j.genero AND j.id_dev = j.id_dev AND j.id_publi = j.id_publi ORDER BY j.id ASC";
         List<Jogo> jogos = new ArrayList<Jogo>();
 
         try {
