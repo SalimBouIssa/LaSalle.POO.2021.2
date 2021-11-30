@@ -660,12 +660,14 @@ public class Login implements ActionListener, MouseListener {
                         publi = getPubli();
                         controller.update(publi);
                         modelPubli = puxarPubli();
+                        modelJogo = puxarJogos();
                         tabela.setModel(modelPubli);
                         tabela.getColumnModel().getColumn(0).setPreferredWidth(10);
                     } else if (evento.getSource() == botaoDelete) {
                         publi = getPubli();
                         controller.delete(publi);
                         modelPubli = puxarPubli();
+                        modelJogo = puxarJogos();
                         tabela.setModel(modelPubli);
                         tabela.getColumnModel().getColumn(0).setPreferredWidth(10);
                     }
